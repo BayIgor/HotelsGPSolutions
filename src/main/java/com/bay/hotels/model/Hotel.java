@@ -125,4 +125,3 @@ public class Hotel {
         this.amenities = amenities;
     }
 }
-
