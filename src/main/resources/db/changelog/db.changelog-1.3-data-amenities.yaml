@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.3
+      author: BayIgor
+      changes:
+        - loadData:
+            tableName: hotel_amenities
+            separator: ","
+            file: db/data/hotel_amenities.csv
+            columns:
+              - column:
+                  name: hotel_id
+                  type: NUMERIC
+              - column:
+                  name: amenities
+                  type: STRING

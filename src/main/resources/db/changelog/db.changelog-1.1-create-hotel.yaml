@@ -1,0 +1,78 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.1
+      author: BayIgor
+      changes:
+        - createTable:
+            tableName: hotel
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: VARCHAR(2000)
+              - column:
+                  name: brand
+                  type: VARCHAR(255)
+              # Address
+              - column:
+                  name: address_house_number
+                  type: INT
+              - column:
+                  name: address_street
+                  type: VARCHAR(255)
+              - column:
+                  name: address_city
+                  type: VARCHAR(255)
+              - column:
+                  name: address_country
+                  type: VARCHAR(255)
+              - column:
+                  name: address_post_code
+                  type: VARCHAR(255)
+              # Contact
+              - column:
+                  name: contacts_phone
+                  type: VARCHAR(255)
+              - column:
+                  name: contacts_email
+                  type: VARCHAR(255)
+              # ArrivalTime
+              - column:
+                  name: arrival_time_check_in
+                  type: VARCHAR(10)
+              - column:
+                  name: arrival_time_check_out
+                  type: VARCHAR(10)
+
+  - changeSet:
+      id: 1.2
+      author: BayIgor
+      changes:
+        - createTable:
+            tableName: hotel_amenities
+            columns:
+              - column:
+                  name: hotel_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: amenities
+                  type: VARCHAR(255)
+
+        - addForeignKeyConstraint:
+            baseTableName: hotel_amenities
+            baseColumnNames: hotel_id
+            referencedTableName: hotel
+            referencedColumnNames: id
+            constraintName: fk_hotel_amenities_hotel

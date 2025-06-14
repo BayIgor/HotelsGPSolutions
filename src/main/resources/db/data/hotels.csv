@@ -1,0 +1,6 @@
+id,name,description,brand,address_house_number,address_street,address_city,address_country,address_post_code,contacts_phone,contacts_email,arrival_time_check_in,arrival_time_check_out
+1,DoubleTree by Hilton Minsk,"Nice hotel",Hilton,1,Pobediteley Avenue,Minsk,Belarus,220004,+375173098000,doubletreeminsk.info@hilton.com,14:00,12:00
+2,Radisson Blu Hotel Moscow,"Modern hotel in Moscow city center",Radisson,20,Lenina Street,Moscow,Russia,101000,+74951234567,info@radissonmoscow.com,15:00,11:00
+3,Hampton by Hilton Warsaw,"Comfortable and budget-friendly",Hilton,15,Marszałkowska,Warsaw,Poland,00-624,+48221234567,warsaw.hampton@hilton.com,14:00,12:00
+4,Marriott Grand Hotel,"Luxury hotel with spa and dining",Marriott,26,Tverskaya,Moscow,Russia,125009,+74959876543,grand@marriott.com,13:00,11:00
+5,Hotel Mogilev Plaza,"A cozy hotel in the heart of Mogilev",Independent,5,Lenina Avenue,Mogilev,Belarus,212030,+375222456789,info@mogilevplaza.by,14:00,12:00

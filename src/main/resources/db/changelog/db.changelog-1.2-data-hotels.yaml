@@ -1,0 +1,9 @@
+databaseChangeLog:
+- changeSet:
+    id: 1.2
+    author: BayIgor
+    changes:
+      - loadData:
+          tableName: hotel
+          file: db/data/hotels.csv
+          separator: ","
