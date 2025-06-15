@@ -2,6 +2,7 @@ package com.bay.hotels.controller;
 
 import com.bay.hotels.model.Hotel;
 import com.bay.hotels.repository.HotelRepository;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,7 @@ public class HistogramController {
     private HotelRepository hotelRepository;
 
     @GetMapping("/{param}")
+    @Operation(summary = "Получить отчет об отелях", description = "Возвращает информацию о количестве отелей по выбранному полю")
     public ResponseEntity<?> getHistogram(@PathVariable String param) {
         return switch (param.toLowerCase()) {
             case "brand" -> ResponseEntity.ok(groupByBrand());
